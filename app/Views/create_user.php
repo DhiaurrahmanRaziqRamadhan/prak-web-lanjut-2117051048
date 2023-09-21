@@ -14,26 +14,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
-        <div class="p-2 border shadow rounded bg-light">
-            <div>
-                <img class="border border-primary border-3 mx-auto d-block rounded-circle shadow" src="<?= base_url('assets/img/foto.jpg') ?>" width="200px">
-            </div>
-            <div class="text-center text-white" style="font-weight: 500;">
-                <div class="p-2 m-3 bg-primary rounded">
-                    <h5><?= $nama?></h5>
-                </div>
-                <div class="p-2 m-3 bg-primary rounded">
-                    <h5><?= $npm?></h5>
-                </div>
-                <div class="p-2 m-3 bg-primary rounded">
-                    <h5><?= $kelas?></h5>
-                </div>
-            </div>
-        </div>
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+  <div class="p-2 border shadow rounded bg-light" style="min-width: 400px">
+    <h3 class="m-3 text-center">Ini Halaman Create User</h3>
+    <form action="<?= base_url('user/store')?>" method="post">
+    <div class="mb-3 mx-3">
+      <label for="nama" class="form-label">Nama</label>
+      <input type="text" name="nama" class="form-control">
     </div>
-
+    <div class="mb-3 mx-3">
+      <label for="npm" class="form-label">NPM</label>
+      <input type="text" name="npm" class="form-control">
+    </div>
+    <div class="mb-3 mx-3">
+      <label for="kelas" class="form-label">Kelas</label>
+      <input type="text" name="kelas" class="form-control">
+    </div>
+    <div class="d-grid mb-3 mx-3">
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </div>
+    </form>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</table>
 </body>
 </html>
